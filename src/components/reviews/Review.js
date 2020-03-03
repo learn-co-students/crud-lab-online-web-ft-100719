@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { deleteReview } from '../../actions/reviews'
 
 class Review extends Component {
 
@@ -7,14 +9,14 @@ class Review extends Component {
 
     return (
       <div>
-        <li>
+        
           {review.text}
-        </li>
-        <button> X </button>
+        
+        <button onClick={() => this.props.deleteReview(review.id)}> X </button>
       </div>
     );
   }
 
 };
 
-export default Review;
+export default connect(null, { deleteReview })(Review)

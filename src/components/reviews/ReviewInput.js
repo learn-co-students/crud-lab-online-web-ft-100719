@@ -6,7 +6,7 @@ class ReviewInput extends Component {
   state = {
     text: '',
     id: '',
-    restaurantId: this.props.restaurant.id
+    restaurantId: this.props.restaurantId
   }
 
   handleOnChange(event) {
@@ -22,7 +22,7 @@ class ReviewInput extends Component {
     this.setState({
       text: '',
       id: '',
-      restaurantId: ''
+      restaurantId: this.props.restaurantId
     });
   }
   render() {

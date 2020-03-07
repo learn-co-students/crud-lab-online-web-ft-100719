@@ -8,8 +8,8 @@ class ReviewsContainer extends Component {
   render() {
     return (
       <div>
-        <ReviewInput addReview={this.props.addReview} restaurant={this.props.restaurant}/>
-        <Reviews deleteReview={this.props.deleteReview} reviews={this.props.reviews}/>
+        <ReviewInput addReview={this.props.addReview} restaurantId={this.props.restaurant.id}/>
+        <Reviews deleteReview={this.props.deleteReview} reviews={this.props.reviews.filter(review => review.restaurantId === this.props.restaurant.id)}/>
       </div>
     )
   }
